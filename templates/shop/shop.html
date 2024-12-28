@@ -1,0 +1,318 @@
+
+{% load static %}
+
+{% block content %}
+<style>
+   .shop-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Stilizare filtre */
+.filters {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-section li {
+    margin-bottom: 10px;
+}
+
+.filter-section a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.filter-section a:hover,
+.filter-section a.active {
+    background: #f0f0f0;
+    color: #007bff;
+}
+
+.sort-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Stilizare produse */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-category {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.product-rating {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.product-rating .filled {
+    color: #ffd700;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-view {
+    flex: 1;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.btn-view:hover {
+    background: #0056b3;
+}
+
+.btn-cart {
+    padding: 8px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-cart:hover {
+    background: #218838;
+}
+
+/* Paginare */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination a, .pagination span {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+}
+
+.pagination .current {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination a:hover {
+    background: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .shop-container {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        margin-bottom: 20px;
+    }
+}
+</style>
+<body>
+
+<div class="shop-container">
+    <!-- Sidebar cu filtre -->
+    <aside class="filters">
+        <div class="filter-section">
+            <h3>Categorii</h3>
+            <ul>
+                <li {% if not current_category %}class="active"{% endif %}>
+                    <a href="{% url 'shop:shop' %}">Toate</a>
+                </li>
+                {% for category in categories %}
+                <li {% if current_category == category.instrument %}class="active"{% endif %}>
+                    <a href="?category={{ category.instrument }}">
+                        {{ category.instrument }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="filter-section">
+            <h3>Tip</h3>
+            <ul>
+                {% for type_choice in categories.0.INSTRUMENT_TYPES %}
+                <li>
+                    <a href="?type={{ type_choice.0 }}" 
+                       {% if current_type == type_choice.0 %}class="active"{% endif %}>
+                        {{ type_choice.1 }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="filter-section">
+            <h3>Sortare</h3>
+            <select class="sort-select" onchange="location = this.value;">
+                <option value="{% url 'shop:shop' %}">Implicit</option>
+                <option value="?sort=price_low">Preț crescător</option>
+                <option value="?sort=price_high">Preț descrescător</option>
+                <option value="?sort=rating">După rating</option>
+            </select>
+        </div>
+    </aside>
+
+    <!-- Secțiunea principală cu produse -->
+    <main class="products">
+        <div class="products-grid">
+            {% for instrument in instruments %}
+            <div class="product-card">
+                <div class="product-image">
+                    {% if instrument.images.exists %}
+                        <img src="{{ instrument.images.first.image.url }}" alt="{{ instrument.model }}">
+                    {% else %}
+                        <img src="{% static 'img/no-image.png' %}" alt="No image available">
+                    {% endif %}
+                </div>
+                <div class="product-info">
+                    <h3>{{ instrument.model }}</h3>
+                    <div class="product-category">
+                        {{ instrument.category.instrument }} - {{ instrument.category.get_type_display }}
+                    </div>
+                    {% if instrument.rating %}
+                    <div class="product-rating">
+                        {% for i in "12345"|make_list %}
+                            <i class="fas fa-star {% if forloop.counter <= instrument.rating %}filled{% endif %}"></i>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="product-price">
+                        {{ instrument.price }} lei
+                    </div>
+                    <div class="product-actions">
+                      
+                        <button class="btn-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="no-results">
+                <p>Nu am găsit niciun instrument care să corespundă criteriilor tale.</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Paginare -->
+        {% if is_paginated %}
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">&laquo; Anterior</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <span class="current">{{ num }}</span>
+                {% else %}
+                    <a href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Următor &raquo;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </main>
+</div>
+
+</body>
+{% endblock %}
