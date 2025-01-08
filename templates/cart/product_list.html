@@ -1,0 +1,264 @@
+<style>
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cart-items {
+    margin-top: 2rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.item-details {
+    display: flex;
+    gap: 1rem;
+}
+
+.item-details img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-info h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.price {
+    color: #666;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-decrease,
+.btn-increase {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-subtotal {
+    font-weight: bold;
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.cart-summary {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+}
+
+.total-amount {
+    font-weight: bol
+}
+</style>
+
+{% block content %}
+<div class="cart-container">
+    <h1>Coșul meu</h1>
+
+    {% if cart_items %}
+        <div class="cart-items">
+            {% for item in cart_items %}
+            <div class="cart-item" data-product-id="{{ item.product.id }}">
+                <div class="item-details">
+                    {% if item.product.image %}
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% endif %}
+                    <div class="item-info">
+                        <h3>{{ item.product.name }}</h3>
+                        <p class="price">{{ item.price }} lei/buc</p>
+                        <p class="stock">În stoc: {{ item.product.stock }}</p>
+                    </div>
+                </div>
+
+                <div class="quantity-controls">
+                    <button class="btn-decrease">-</button>
+                    <input type="number" 
+                           class="quantity-input" 
+                           value="{{ item.quantity }}"
+                           min="0" 
+                           max="{{ item.product.stock }}"
+                    >
+                    <button class="btn-increase">+</button>
+                </div>
+
+                <div class="item-subtotal">
+                    <p>Subtotal: <span>{{ item.subtotal }} lei</span></p>
+                </div>
+
+                <button class="btn-remove" title="Șterge din coș">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </div>
+            {% endfor %}
+
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <h3>Total coș:</h3>
+                    <p class="total-amount">{{ total }} lei</p>
+                </div>
+                <div class="cart-actions">
+                    <a href="{% url 'shop:product_list' %}" class="btn-continue">
+                        Continuă cumpărăturile
+                    </a>
+                    <a href="{% url 'checkout' %}" class="btn-checkout">
+                        Finalizează comanda
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="empty-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <h2>Coșul tău este gol</h2>
+            <p>Nu ai niciun produs în coș.</p>
+            <a href="/shop" class="btn-shop">
+                Vezi produsele disponibile
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function updateProductCard(productId, quantity) {
+            const card = document.querySelector(`.product-card[data-product-id="${productId}"]`);
+            const input = card.querySelector('.quantity-input');
+            input.value = quantity;
+            
+            if (quantity > 0) {
+                card.classList.add('in-cart');
+            } else {
+                card.classList.remove('in-cart');
+            }
+        }
+    
+        // Creștere cantitate
+        document.querySelectorAll('.btn-increase').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.product-card');
+                const productId = card.dataset.productId;
+                const input = card.querySelector('.quantity-input');
+                const newQuantity = parseInt(input.value) + 1;
+                
+                fetch(`/cart/update/${productId}/`, {
+                    method: 'POST',
+                    body: JSON.stringify({ quantity: newQuantity }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        updateProductCard(productId, data.product_quantity);
+                    } else {
+                        alert(data.message);
+                    }
+                });
+            });
+        });
+    
+        // Descreștere cantitate
+        document.querySelectorAll('.btn-decrease').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const card = this.closest('.product-card');
+                const productId = card.dataset.productId;
+                const input = card.querySelector('.quantity-input');
+                const newQuantity = Math.max(0, parseInt(input.value) - 1);
+                
+                fetch(`/cart/update/${productId}/`, {
+                    method: 'POST',
+                    body: JSON.stringify({ quantity: newQuantity }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        updateProductCard(productId, data.product_quantity);
+                    }
+                });
+            });
+        });
+    
+        // Input direct
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.addEventListener('change', function() {
+                const card = this.closest('.product-card');
+                const productId = card.dataset.productId;
+                const newQuantity = parseInt(this.value);
+                
+                fetch(`/cart/update/${productId}/`, {
+                    method: 'POST',
+                    body: JSON.stringify({ quantity: newQuantity }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        updateProductCard(productId, data.product_quantity);
+                    } else {
+                        alert(data.message);
+                        this.value = data.product_quantity;
+                    }
+                });
+            });
+        });
+    });
+    </script>
+    
+    

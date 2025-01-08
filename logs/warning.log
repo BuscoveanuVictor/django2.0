@@ -1,0 +1,2228 @@
+WARNING 2024-12-29 12:06:51,870 basehttp 38280 25936 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-29 12:06:51,873 basehttp 38280 31060 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-29 12:06:51,873 basehttp 38280 35916 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-29 12:06:51,874 basehttp 38280 25680 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+WARNING 2024-12-29 12:06:58,794 log 38280 29216 Not Found: /account
+WARNING 2024-12-29 12:06:58,795 basehttp 38280 29216 "GET /account HTTP/1.1" 404 3107
+WARNING 2024-12-29 12:07:05,259 log 38280 29216 Not Found: /account/register
+WARNING 2024-12-29 12:07:05,260 basehttp 38280 29216 "GET /account/register HTTP/1.1" 404 3134
+WARNING 2024-12-29 12:09:05,676 log 34320 37388 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:09:05,677 basehttp 34320 37388 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:11:18,784 log 31556 1980 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:11:18,784 basehttp 31556 1980 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:11:56,706 log 2356 35380 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:11:56,706 basehttp 2356 35380 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:11:58,004 log 2356 35380 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:11:58,004 basehttp 2356 35380 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:12:22,057 log 25056 2120 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:12:22,057 basehttp 25056 2120 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:12:56,824 log 24580 4384 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:12:56,825 basehttp 24580 4384 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:12:57,836 log 24580 4384 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:12:57,837 basehttp 24580 4384 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:13:41,249 log 25092 23884 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:13:41,249 basehttp 25092 23884 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:13:42,037 log 25092 23884 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:13:42,038 basehttp 25092 23884 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:13:43,927 log 25092 23884 Not Found: /accounts/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:13:43,928 basehttp 25092 23884 "GET /accounts/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3205
+WARNING 2024-12-29 12:13:55,681 log 25092 23884 Not Found: /account/confirm-email/b29769a4-8809-40/
+WARNING 2024-12-29 12:13:55,682 basehttp 25092 23884 "GET /account/confirm-email/b29769a4-8809-40/ HTTP/1.1" 404 3861
+ERROR 2024-12-29 12:14:09,825 log 32220 37976 Internal Server Error: /account/confirm-email/b29769a4-8809-40/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\views.py", line 97, in confirm_mail_view
+    user = CustomUser.objects.get(cod=code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'cod' into field. Choices are: address, birth_date, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, newsletter, password, phone_number, terms_and_conditions, user_permissions, username
+ERROR 2024-12-29 12:14:09,828 basehttp 32220 37976 "GET /account/confirm-email/b29769a4-8809-40/ HTTP/1.1" 500 124360
+WARNING 2024-12-29 12:25:43,355 log 31124 34352 Not Found: /accounts/confirm-email/99bc9e29-2f91-44/
+WARNING 2024-12-29 12:25:43,356 basehttp 31124 34352 "GET /accounts/confirm-email/99bc9e29-2f91-44/ HTTP/1.1" 404 3205
+ERROR 2024-12-29 12:33:19,692 log 28844 6652 Internal Server Error: /account/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\views.py", line 20, in index_view
+    return render(request, 'accounts/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+ERROR 2024-12-29 12:33:19,698 basehttp 28844 6652 "GET /account/ HTTP/1.1" 500 162452
+ERROR 2024-12-29 12:34:26,306 log 34844 3108 Internal Server Error: /account/login/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\views.py", line 156, in login_view
+    return redirect('profile')
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'profile' not found. 'profile' is not a valid view function or pattern name.
+ERROR 2024-12-29 12:34:26,309 basehttp 34844 3108 "POST /account/login/ HTTP/1.1" 500 94856
+WARNING 2024-12-29 12:35:13,370 log 36668 36328 Forbidden (CSRF token from POST incorrect.): /account/login/
+WARNING 2024-12-29 12:35:13,371 basehttp 36668 36328 "POST /account/login/ HTTP/1.1" 403 2503
+ERROR 2024-12-29 12:36:22,774 log 36668 36328 Internal Server Error: /account/password-change/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\views.py", line 192, in password_change_view
+    return render(request, 'accounts/change_password.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts/change_password.html
+ERROR 2024-12-29 12:36:22,775 basehttp 36668 36328 "GET /account/password-change/ HTTP/1.1" 500 88893
+WARNING 2024-12-29 12:37:52,343 log 36668 36328 Not Found: /accounts/
+WARNING 2024-12-29 12:37:52,343 basehttp 36668 36328 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:38:25,053 log 36668 36328 Not Found: /accounts/
+WARNING 2024-12-29 12:38:25,053 basehttp 36668 36328 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:20,072 log 36948 2708 Not Found: /accounts/
+WARNING 2024-12-29 12:39:20,073 basehttp 36948 2708 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:21,103 log 36948 2708 Not Found: /accounts/
+WARNING 2024-12-29 12:39:21,104 basehttp 36948 2708 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:32,047 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:32,048 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:32,556 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:32,557 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:32,904 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:32,904 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:34,811 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:34,811 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:34,952 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:34,952 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:35,078 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:35,079 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:36,304 log 16456 34568 Not Found: /accounts/
+WARNING 2024-12-29 12:39:36,305 basehttp 16456 34568 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:46,077 log 29244 11952 Not Found: /accounts/
+WARNING 2024-12-29 12:39:46,078 basehttp 29244 11952 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:39:52,213 log 29244 11952 Not Found: /accounts/
+WARNING 2024-12-29 12:39:52,214 basehttp 29244 11952 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:40:19,218 log 37960 31224 Not Found: /accounts/
+WARNING 2024-12-29 12:40:19,219 basehttp 37960 31224 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:40:19,996 log 37960 31224 Not Found: /accounts/
+WARNING 2024-12-29 12:40:19,996 basehttp 37960 31224 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:40:52,563 log 28524 16032 Not Found: /accounts/
+WARNING 2024-12-29 12:40:52,564 basehttp 28524 16032 "GET /accounts/ HTTP/1.1" 404 3112
+WARNING 2024-12-29 12:41:20,335 basehttp 28524 35924 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+WARNING 2024-12-29 12:41:20,335 basehttp 28524 16032 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-29 12:41:20,335 basehttp 28524 8060 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-29 12:41:20,335 basehttp 28524 36204 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-29 12:44:41,294 log 28524 34860 Not Found: /about
+WARNING 2024-12-29 12:44:41,294 basehttp 28524 34860 "GET /about HTTP/1.1" 404 3100
+WARNING 2024-12-30 11:52:05,514 basehttp 19076 33852 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 11:52:05,514 basehttp 19076 34860 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+WARNING 2024-12-30 11:52:05,514 basehttp 19076 26864 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-30 11:52:05,515 basehttp 19076 35720 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 11:52:12,092 log 19076 33348 Not Found: /about
+WARNING 2024-12-30 11:52:12,092 basehttp 19076 33348 "GET /about HTTP/1.1" 404 3100
+WARNING 2024-12-30 12:12:47,921 basehttp 38500 35888 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:12:47,929 basehttp 38500 31000 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:12:47,933 basehttp 38500 27852 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:12:47,938 basehttp 38500 8676 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:12:53,475 log 38500 7300 Not Found: /cart
+WARNING 2024-12-30 12:12:53,476 basehttp 38500 7300 "GET /cart HTTP/1.1" 404 3097
+WARNING 2024-12-30 12:21:33,032 basehttp 36908 31040 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:21:33,032 basehttp 36908 34212 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:21:33,032 basehttp 36908 37048 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:21:33,032 basehttp 36908 32272 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+ERROR 2024-12-30 12:21:35,456 log 36908 36944 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\cart\views.py", line 8, in cart_list
+    return render(request, 'cart/product_list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'cart_quantity'
+ERROR 2024-12-30 12:21:35,460 basehttp 36908 36944 "GET /cart/ HTTP/1.1" 500 202625
+ERROR 2024-12-30 12:24:34,001 log 36908 36944 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\cart\views.py", line 8, in cart_list
+    return render(request, 'cart/product_list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+ERROR 2024-12-30 12:24:34,006 basehttp 36908 36944 "GET /cart/ HTTP/1.1" 500 162034
+ERROR 2024-12-30 12:24:35,640 log 36908 36944 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\cart\views.py", line 8, in cart_list
+    return render(request, 'cart/product_list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'product_list' not found. 'product_list' is not a valid view function or pattern name.
+ERROR 2024-12-30 12:24:35,645 basehttp 36908 36944 "GET /cart/ HTTP/1.1" 500 162034
+ERROR 2024-12-30 12:25:02,131 log 36908 36944 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\cart\views.py", line 8, in cart_list
+    return render(request, 'cart/product_list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'shop' not found. 'shop' is not a valid view function or pattern name.
+ERROR 2024-12-30 12:25:02,135 basehttp 36908 36944 "GET /cart/ HTTP/1.1" 500 160964
+ERROR 2024-12-30 12:25:53,118 log 36908 36944 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column shop_instrument.stock does not exist
+LINE 1: ...ument"."rating", "shop_instrument"."category_id", "shop_inst...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 65, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 414, in __bool__
+    self._fetch_all()
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column shop_instrument.stock does not exist
+LINE 1: ...ument"."rating", "shop_instrument"."category_id", "shop_inst...
+                                                             ^
+
+ERROR 2024-12-30 12:25:53,124 basehttp 36908 36944 "GET /shop/ HTTP/1.1" 500 225568
+ERROR 2024-12-30 12:26:57,582 log 36908 36944 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\cart\views.py", line 8, in cart_list
+    return render(request, 'cart/product_list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'products_list' not found. 'products_list' is not a valid view function or pattern name.
+ERROR 2024-12-30 12:26:57,585 basehttp 36908 36944 "GET /cart/ HTTP/1.1" 500 162078
+ERROR 2024-12-30 12:27:01,200 log 36908 36944 Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\cart\views.py", line 8, in cart_list
+    return render(request, 'cart/product_list.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'products_list' not found. 'products_list' is not a valid view function or pattern name.
+ERROR 2024-12-30 12:27:01,205 basehttp 36908 36944 "GET /cart/ HTTP/1.1" 500 161941
+WARNING 2024-12-30 12:27:24,534 log 36908 36944 Not Found: /ceva
+WARNING 2024-12-30 12:27:24,535 basehttp 36908 36944 "GET /ceva HTTP/1.1" 404 3245
+WARNING 2024-12-30 12:27:39,926 log 36908 36944 Not Found: /ceva
+WARNING 2024-12-30 12:27:39,927 basehttp 36908 36944 "GET /ceva HTTP/1.1" 404 3245
+WARNING 2024-12-30 12:27:40,582 log 36908 36944 Not Found: /ceva
+WARNING 2024-12-30 12:27:40,582 basehttp 36908 36944 "GET /ceva HTTP/1.1" 404 3245
+WARNING 2024-12-30 12:27:42,306 log 36908 36944 Not Found: /ceva
+WARNING 2024-12-30 12:27:42,306 basehttp 36908 36944 "GET /ceva HTTP/1.1" 404 3245
+WARNING 2024-12-30 12:27:50,981 log 36908 36944 Not Found: /ceva
+WARNING 2024-12-30 12:27:50,982 basehttp 36908 36944 "GET /ceva HTTP/1.1" 404 3245
+WARNING 2024-12-30 12:27:54,098 log 36908 36944 Not Found: /ceva
+WARNING 2024-12-30 12:27:54,099 basehttp 36908 36944 "GET /ceva HTTP/1.1" 404 3245
+ERROR 2024-12-30 12:28:05,709 log 19424 16856 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column shop_instrument.stock does not exist
+LINE 1: ...ument"."rating", "shop_instrument"."category_id", "shop_inst...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 65, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 414, in __bool__
+    self._fetch_all()
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column shop_instrument.stock does not exist
+LINE 1: ...ument"."rating", "shop_instrument"."category_id", "shop_inst...
+                                                             ^
+
+ERROR 2024-12-30 12:28:05,714 basehttp 19424 16856 "GET /shop/ HTTP/1.1" 500 225568
+WARNING 2024-12-30 12:29:42,465 log 23340 11140 Not Found: /shop/static/css/shop.css
+WARNING 2024-12-30 12:29:42,466 basehttp 23340 11140 "GET /shop/static/css/shop.css HTTP/1.1" 404 3305
+WARNING 2024-12-30 12:29:42,471 basehttp 23340 11140 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:29:42,480 log 23340 20836 Not Found: /shop/static/css/shop.css
+WARNING 2024-12-30 12:29:42,480 basehttp 23340 20836 "GET /shop/static/css/shop.css HTTP/1.1" 404 3305
+WARNING 2024-12-30 12:29:42,513 basehttp 23340 36128 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:29:45,363 basehttp 23340 21404 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:29:45,365 log 23340 20836 Not Found: /shop/static/css/shop.css
+WARNING 2024-12-30 12:29:45,365 basehttp 23340 20836 "GET /shop/static/css/shop.css HTTP/1.1" 404 3305
+WARNING 2024-12-30 12:29:45,374 basehttp 23340 20836 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:30:00,032 basehttp 23340 34496 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:30:00,034 log 23340 34048 Not Found: /shop/static/css/shop.css
+WARNING 2024-12-30 12:30:00,034 basehttp 23340 34048 "GET /shop/static/css/shop.css HTTP/1.1" 404 3305
+WARNING 2024-12-30 12:30:00,041 basehttp 23340 34048 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:30:02,739 basehttp 23340 17128 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:30:02,749 basehttp 23340 28056 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:30:02,752 basehttp 23340 18344 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:30:02,753 basehttp 23340 39260 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:30:03,387 log 23340 11344 Not Found: /about
+WARNING 2024-12-30 12:30:03,387 basehttp 23340 11344 "GET /about HTTP/1.1" 404 3248
+WARNING 2024-12-30 12:30:17,225 basehttp 23340 13028 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:30:17,227 log 23340 11344 Not Found: /shop/static/css/shop.css
+WARNING 2024-12-30 12:30:17,227 basehttp 23340 11344 "GET /shop/static/css/shop.css HTTP/1.1" 404 3305
+WARNING 2024-12-30 12:30:17,236 basehttp 23340 11344 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+WARNING 2024-12-30 12:35:59,812 log 39032 19516 Not Found: /shop/static/css/shop.css
+WARNING 2024-12-30 12:35:59,813 basehttp 39032 19516 "GET /shop/static/css/shop.css HTTP/1.1" 404 3305
+WARNING 2024-12-30 12:35:59,822 basehttp 39032 19516 "GET /static/images/no-image.png HTTP/1.1" 404 1871
+ERROR 2024-12-30 12:38:02,578 log 39032 16292 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: base.html
+ERROR 2024-12-30 12:38:02,582 basehttp 39032 16292 "GET /shop/ HTTP/1.1" 500 198317
+ERROR 2024-12-30 12:38:10,642 log 39032 16292 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'static', expected 'endif'. Did you forget to register or load this tag?
+ERROR 2024-12-30 12:38:10,648 basehttp 39032 16292 "GET /shop/ HTTP/1.1" 500 275640
+WARNING 2024-12-30 12:40:43,053 basehttp 14560 7984 "GET /static/images/tobe.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:40:43,057 basehttp 14560 37492 "GET /static/images/ro-flag.png HTTP/1.1" 404 1868
+WARNING 2024-12-30 12:40:43,063 basehttp 14560 36608 "GET /static/images/pian.jpg HTTP/1.1" 404 1859
+WARNING 2024-12-30 12:40:43,063 basehttp 14560 2620 "GET /static/images/chitara.jpg HTTP/1.1" 404 1868
+ERROR 2024-12-30 12:48:13,947 log 5316 2160 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: shop/.html
+ERROR 2024-12-30 12:48:13,949 basehttp 5316 2160 "GET /shop/ HTTP/1.1" 500 90749
+ERROR 2024-12-30 12:51:40,680 log 34084 5544 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 276: 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-12-30 12:51:40,684 basehttp 34084 5544 "GET /shop/ HTTP/1.1" 500 164037
+ERROR 2024-12-30 12:53:44,043 log 34084 5544 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 137: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-12-30 12:53:44,047 basehttp 34084 5544 "GET /shop/ HTTP/1.1" 500 195806
+ERROR 2024-12-30 12:53:59,914 log 34084 5544 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 193: 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-12-30 12:53:59,918 basehttp 34084 5544 "GET /shop/ HTTP/1.1" 500 156121
+ERROR 2024-12-30 12:54:00,665 log 34084 5544 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 69, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 193: 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-12-30 12:54:00,668 basehttp 34084 5544 "GET /shop/ HTTP/1.1" 500 156121
+ERROR 2024-12-30 12:57:16,421 log 29100 10952 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 70, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' not found. 'productView' is not a valid view function or pattern name.
+ERROR 2024-12-30 12:57:16,425 basehttp 29100 10952 "GET /shop/ HTTP/1.1" 500 145824
+ERROR 2024-12-30 12:57:51,835 log 9788 26096 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 70, in ShopView
+    return render(request, 'shop/shop.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 12:57:51,838 basehttp 9788 26096 "GET /shop/ HTTP/1.1" 500 148954
+WARNING 2024-12-30 12:58:42,663 log 9788 26096 Not Found: /media/instruments/19675769_800.jpg
+WARNING 2024-12-30 12:58:42,665 log 9788 25056 Not Found: /media/instruments/16485021_800.jpg
+WARNING 2024-12-30 12:58:42,666 log 9788 36820 Not Found: /media/instruments/17635074_800.jpg
+WARNING 2024-12-30 12:58:42,667 basehttp 9788 26096 "GET /media/instruments/19675769_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 12:58:42,667 basehttp 9788 25056 "GET /media/instruments/16485021_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 12:58:42,668 basehttp 9788 36820 "GET /media/instruments/17635074_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 12:59:15,983 log 9788 36820 Not Found: /media/instruments/19675769_800.jpg
+WARNING 2024-12-30 12:59:15,985 log 9788 25056 Not Found: /media/instruments/16485021_800.jpg
+WARNING 2024-12-30 12:59:15,985 basehttp 9788 36820 "GET /media/instruments/19675769_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 12:59:15,986 basehttp 9788 25056 "GET /media/instruments/16485021_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 12:59:15,987 log 9788 26096 Not Found: /media/instruments/17635074_800.jpg
+WARNING 2024-12-30 12:59:15,988 basehttp 9788 26096 "GET /media/instruments/17635074_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:02:37,048 log 9788 26096 Not Found: /media/instruments/19675769_800.jpg
+WARNING 2024-12-30 13:02:37,050 log 9788 36820 Not Found: /media/instruments/17635074_800.jpg
+WARNING 2024-12-30 13:02:37,051 log 9788 25056 Not Found: /media/instruments/16485021_800.jpg
+WARNING 2024-12-30 13:02:37,051 basehttp 9788 26096 "GET /media/instruments/19675769_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:02:37,052 basehttp 9788 36820 "GET /media/instruments/17635074_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:02:37,052 basehttp 9788 25056 "GET /media/instruments/16485021_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:02:59,065 log 9788 25056 Not Found: /media/instruments/19675769_800.jpg
+WARNING 2024-12-30 13:02:59,067 basehttp 9788 25056 "GET /media/instruments/19675769_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:02:59,068 log 9788 26096 Not Found: /media/instruments/16485021_800.jpg
+WARNING 2024-12-30 13:02:59,069 log 9788 36820 Not Found: /media/instruments/17635074_800.jpg
+WARNING 2024-12-30 13:02:59,070 basehttp 9788 26096 "GET /media/instruments/16485021_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:02:59,070 basehttp 9788 36820 "GET /media/instruments/17635074_800.jpg HTTP/1.1" 404 3619
+WARNING 2024-12-30 13:04:11,939 log 31432 32812 Not Found: /instruments/19675769_800.jpg
+WARNING 2024-12-30 13:04:11,941 log 31432 38240 Not Found: /instruments/16485021_800.jpg
+WARNING 2024-12-30 13:04:11,943 log 31432 37036 Not Found: /instruments/17635074_800.jpg
+WARNING 2024-12-30 13:04:11,944 basehttp 31432 38240 "GET /instruments/16485021_800.jpg HTTP/1.1" 404 3601
+WARNING 2024-12-30 13:04:11,944 basehttp 31432 37036 "GET /instruments/17635074_800.jpg HTTP/1.1" 404 3601
+WARNING 2024-12-30 13:04:11,944 basehttp 31432 32812 "GET /instruments/19675769_800.jpg HTTP/1.1" 404 3601
+WARNING 2024-12-30 13:09:07,398 log 10548 18568 Not Found: /media/instruments/19675769_800.jpg
+WARNING 2024-12-30 13:09:07,400 log 10548 8108 Not Found: /media/instruments/16485021_800.jpg
+WARNING 2024-12-30 13:09:07,401 basehttp 10548 18568 "GET /media/instruments/19675769_800.jpg HTTP/1.1" 404 4003
+WARNING 2024-12-30 13:09:07,402 log 10548 39104 Not Found: /media/instruments/17635074_800.jpg
+WARNING 2024-12-30 13:09:07,403 basehttp 10548 8108 "GET /media/instruments/16485021_800.jpg HTTP/1.1" 404 4003
+WARNING 2024-12-30 13:09:07,403 basehttp 10548 39104 "GET /media/instruments/17635074_800.jpg HTTP/1.1" 404 4003
+WARNING 2024-12-30 13:09:08,135 log 10548 8108 Not Found: /media/instruments/19675769_800.jpg
+WARNING 2024-12-30 13:09:08,137 log 10548 39104 Not Found: /media/instruments/16485021_800.jpg
+WARNING 2024-12-30 13:09:08,138 log 10548 18568 Not Found: /media/instruments/17635074_800.jpg
+WARNING 2024-12-30 13:09:08,139 basehttp 10548 8108 "GET /media/instruments/19675769_800.jpg HTTP/1.1" 404 4003
+WARNING 2024-12-30 13:09:08,139 basehttp 10548 18568 "GET /media/instruments/17635074_800.jpg HTTP/1.1" 404 4003
+WARNING 2024-12-30 13:09:08,140 basehttp 10548 39104 "GET /media/instruments/16485021_800.jpg HTTP/1.1" 404 4003
+WARNING 2024-12-30 13:09:35,211 log 26708 31536 Not Found: /instruments/19675769_800.jpg
+WARNING 2024-12-30 13:09:35,212 log 26708 24124 Not Found: /instruments/16485021_800.jpg
+WARNING 2024-12-30 13:09:35,213 log 26708 36636 Not Found: /instruments/17635074_800.jpg
+WARNING 2024-12-30 13:09:35,214 basehttp 26708 31536 "GET /instruments/19675769_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:09:35,214 basehttp 26708 24124 "GET /instruments/16485021_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:09:35,214 basehttp 26708 36636 "GET /instruments/17635074_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:09:35,839 log 26708 24124 Not Found: /instruments/19675769_800.jpg
+WARNING 2024-12-30 13:09:35,840 log 26708 31536 Not Found: /instruments/16485021_800.jpg
+WARNING 2024-12-30 13:09:35,842 log 26708 36636 Not Found: /instruments/17635074_800.jpg
+WARNING 2024-12-30 13:09:35,843 basehttp 26708 31536 "GET /instruments/16485021_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:09:35,843 basehttp 26708 24124 "GET /instruments/19675769_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:09:35,843 basehttp 26708 36636 "GET /instruments/17635074_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:11:11,936 log 26708 24124 Not Found: /instruments/16485021_800.jpg
+WARNING 2024-12-30 13:11:11,938 basehttp 26708 24124 "GET /instruments/16485021_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:11:11,941 log 26708 36636 Not Found: /instruments/17635074_800.jpg
+WARNING 2024-12-30 13:11:11,941 basehttp 26708 36636 "GET /instruments/17635074_800.jpg HTTP/1.1" 404 3973
+WARNING 2024-12-30 13:26:57,669 log 26708 24020 Not Found: /about
+WARNING 2024-12-30 13:26:57,670 basehttp 26708 24020 "GET /about HTTP/1.1" 404 3881
+ERROR 2024-12-30 13:27:07,064 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:07,067 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=&type=ACOUSTIC&min_rating=&sort= HTTP/1.1" 500 142060
+ERROR 2024-12-30 13:27:07,891 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:07,896 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=&type=ACOUSTIC&min_rating=&sort= HTTP/1.1" 500 142060
+ERROR 2024-12-30 13:27:08,155 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:08,158 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=&type=ACOUSTIC&min_rating=&sort= HTTP/1.1" 500 142060
+ERROR 2024-12-30 13:27:08,312 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:08,315 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=&type=ACOUSTIC&min_rating=&sort= HTTP/1.1" 500 142060
+ERROR 2024-12-30 13:27:10,983 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:10,986 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=&type=ACOUSTIC&min_rating=0&sort= HTTP/1.1" 500 142069
+ERROR 2024-12-30 13:27:12,233 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:12,236 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=&type=ACOUSTIC&min_rating=0&sort=price_low HTTP/1.1" 500 142159
+ERROR 2024-12-30 13:27:15,340 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:15,344 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=chitara&type=ACOUSTIC&min_rating=0&sort=price_low HTTP/1.1" 500 142222
+ERROR 2024-12-30 13:27:15,585 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:15,588 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=chitara&type=ACOUSTIC&min_rating=0&sort=price_low HTTP/1.1" 500 142222
+ERROR 2024-12-30 13:27:59,131 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:59,134 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=chitara&type=ACOUSTIC&min_rating=&sort=price_low HTTP/1.1" 500 142325
+ERROR 2024-12-30 13:27:59,597 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:27:59,600 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=chitara&type=ACOUSTIC&min_rating=&sort=price_low HTTP/1.1" 500 142325
+ERROR 2024-12-30 13:28:00,892 log 26708 24020 Internal Server Error: /shop/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 63, in ShopView
+    html = render_to_string(
+           ^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'productView' with arguments '('',)' not found. 1 pattern(s) tried: ['product/(?P<product_id>[0-9]+)/\\Z']
+ERROR 2024-12-30 13:28:00,897 basehttp 26708 24020 "GET /shop/?model=&min_price=&max_price=&category=chitara&type=ACOUSTIC&min_rating=&sort= HTTP/1.1" 500 142235
+WARNING 2024-12-30 13:29:01,230 basehttp 26708 24020 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:29:01,234 basehttp 26708 29480 "GET /static/images/tobe.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:29:01,235 basehttp 26708 27252 "GET /static/images/chitara.jpg HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:29:01,235 basehttp 26708 30868 "GET /static/images/pian.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:36:21,748 basehttp 26708 20068 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:36:21,755 basehttp 26708 33240 "GET /static/images/tobe.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:36:21,760 basehttp 26708 34792 "GET /static/images/chitara.jpg HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:36:21,761 basehttp 26708 15756 "GET /static/images/pian.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:36:22,389 basehttp 26708 37720 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:36:22,398 basehttp 26708 10296 "GET /static/images/chitara.jpg HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:36:22,401 basehttp 26708 23704 "GET /static/images/tobe.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:36:22,401 basehttp 26708 3532 "GET /static/images/pian.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:36:22,895 basehttp 26708 39132 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:36:22,903 basehttp 26708 9388 "GET /static/images/chitara.jpg HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:36:22,911 basehttp 26708 39932 "GET /static/images/tobe.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:36:22,915 basehttp 26708 29904 "GET /static/images/pian.jpg HTTP/1.1" 404 1972
+ERROR 2024-12-30 13:36:59,319 log 26708 1796 Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: "'images/chitara.jpg'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\shop\views.py", line 14, in index
+    return render(request, 'shop/index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\template\base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 255: ''images/chitara.jpg'', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2024-12-30 13:36:59,323 basehttp 26708 1796 "GET / HTTP/1.1" 500 172793
+WARNING 2024-12-30 13:37:09,753 basehttp 26708 1796 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:37:09,764 basehttp 26708 33820 "GET /static/images/pian.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:37:09,764 basehttp 26708 9672 "GET /static/images/tobe.jpg HTTP/1.1" 404 1972
+WARNING 2024-12-30 13:37:28,546 basehttp 26708 19448 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2024-12-30 13:40:27,112 basehttp 26708 38132 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 14:18:43,019 basehttp 30328 27224 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 14:18:47,385 basehttp 30328 38892 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 14:18:53,135 basehttp 30328 7860 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 14:18:54,011 log 30328 19272 Not Found: /about
+WARNING 2025-01-04 14:18:54,012 basehttp 30328 19272 "GET /about HTTP/1.1" 404 3881
+WARNING 2025-01-04 14:48:50,158 basehttp 31260 7648 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 14:53:07,774 basehttp 33132 39668 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 15:06:19,603 basehttp 36216 3300 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+ERROR 2025-01-04 15:06:33,444 log 36216 18240 Internal Server Error: /account/login/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\views.py", line 140, in login_view
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 326, in full_clean
+    self._clean_form()
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 342, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\forms.py", line 78, in clean
+    ip = request.META.get('REMOTE_ADDR')
+         ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'META'
+ERROR 2025-01-04 15:06:33,446 basehttp 36216 18240 "POST /account/login/ HTTP/1.1" 500 92309
+ERROR 2025-01-04 15:07:11,416 log 35756 19864 Internal Server Error: /account/login/
+Traceback (most recent call last):
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\views.py", line 140, in login_view
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 326, in full_clean
+    self._clean_form()
+  File "D:\A_GIT\django2.0\env\Lib\site-packages\django\forms\forms.py", line 342, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "D:\A_GIT\django2.0\accounts\forms.py", line 78, in clean
+    ip = request.get('REMOTE_ADDR')
+         ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+ERROR 2025-01-04 15:07:11,418 basehttp 35756 19864 "POST /account/login/ HTTP/1.1" 500 92293
+ERROR 2025-01-04 15:08:33,998 views 8584 32400 Eroare la autentificarea utilizatorului: admin
+CRITICAL 2025-01-04 15:08:33,999 views 8584 32400 Tentative de login cu username-ul admin de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:08:36,324 views 8584 32400 Eroare la autentificarea utilizatorului: admin
+CRITICAL 2025-01-04 15:08:36,325 views 8584 32400 Tentative de login cu username-ul admin de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:09:39,524 views 24968 8724 Eroare la autentificarea utilizatorului: awd
+CRITICAL 2025-01-04 15:09:39,524 views 24968 8724 Tentative de login cu username-ul awd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:09:42,575 views 24968 8724 Eroare la autentificarea utilizatorului: awdawd
+CRITICAL 2025-01-04 15:09:42,575 views 24968 8724 Tentative de login cu username-ul awdawd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:09:44,639 views 24968 8724 Eroare la autentificarea utilizatorului: awd
+CRITICAL 2025-01-04 15:09:44,639 views 24968 8724 Tentative de login cu username-ul awd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:09:47,150 views 24968 8724 Eroare la autentificarea utilizatorului: awawd
+CRITICAL 2025-01-04 15:09:47,151 views 24968 8724 Tentative de login cu username-ul awawd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:10:57,283 views 41608 35152 Eroare la autentificarea utilizatorului: awawd
+CRITICAL 2025-01-04 15:10:57,284 views 41608 35152 Tentative de login cu username-ul awawd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:10:59,130 views 41608 35152 Eroare la autentificarea utilizatorului: awawdawd
+CRITICAL 2025-01-04 15:10:59,130 views 41608 35152 Tentative de login cu username-ul awawdawd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:11:00,714 views 41608 35152 Eroare la autentificarea utilizatorului: awawdawd
+CRITICAL 2025-01-04 15:11:00,715 views 41608 35152 Tentative de login cu username-ul awawdawd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:11:02,826 views 41608 35152 Eroare la autentificarea utilizatorului: awawdawd
+CRITICAL 2025-01-04 15:11:02,826 views 41608 35152 Tentative de login cu username-ul awawdawd de la adresa IP: 127.0.0.1
+ERROR 2025-01-04 15:11:04,603 views 41608 35152 Eroare la autentificarea utilizatorului: awawdawd
+CRITICAL 2025-01-04 15:11:04,604 views 41608 35152 Tentative de login cu username-ul awawdawd de la adresa IP: 127.0.0.1
+WARNING 2025-01-04 15:30:35,872 log 18636 22596 Not Found: /adaugare_produse
+WARNING 2025-01-04 15:30:35,872 basehttp 18636 22596 "GET /adaugare_produse HTTP/1.1" 404 3925
+WARNING 2025-01-04 15:43:17,923 basehttp 19980 22240 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-04 15:56:54,543 basehttp 16876 20208 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-08 22:06:14,038 basehttp 23136 27584 "GET /static/images/ro-flag.png HTTP/1.1" 404 1981
+WARNING 2025-01-08 22:06:14,193 log 23136 27984 Not Found: /favicon.ico
+WARNING 2025-01-08 22:06:14,193 basehttp 23136 27984 "GET /favicon.ico HTTP/1.1" 404 4105

@@ -28,8 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Application definition
 
@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'shop',
+    'accounts',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +73,11 @@ TEMPLATES = [
         },
     },
 ]
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+
 
 WSGI_APPLICATION = 'my_project.wsgi.application'
 
@@ -87,6 +95,32 @@ DATABASES = {
         'PORT': '5432',     
     }
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'profile'
+LOGOUT_REDIRECT_URL = 'login'
+
+SESSION_COOKIE_AGE = 86400 # sesiune de 24 ore in secunde
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'victor.buscoveanu@gmail.com'
+EMAIL_HOST_PASSWORD = 'parola'
+DEFAULT_FROM_EMAIL = 'victor.buscoveanu@gmail.com'
+
+ADMINS = [
+    ('Admin1', 'victor.buscoveanu@gmail.com'),
+    ('Admin2', 'victor2.buscoveanu@gmail.com'),
+]
+
+# Asta e folosit pentru a testa email-ul fara a trimite mesaje reale
+# d-aia iti apare in consola email-ul
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -128,3 +162,63 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'level': 'WARNING',
+        },
+        'debug_file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/debug.log',
+            'formatter': 'verbose',
+            'level': 'DEBUG',
+        },
+        'info_file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/info.log',
+            'formatter': 'verbose',
+            'level': 'INFO',
+        },
+        'warning_file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/warning.log',
+            'formatter': 'verbose',
+            'level': 'WARNING',
+        },
+        'error_file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/error.log',
+            'formatter': 'verbose',
+            'level': 'ERROR',
+        },
+        'critical_file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/critical.log',
+            'formatter': 'verbose',
+            'level': 'CRITICAL',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'debug_file', 'info_file', 'warning_file', 'error_file', 'critical_file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}

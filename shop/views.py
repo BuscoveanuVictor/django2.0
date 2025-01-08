@@ -1,52 +1,80 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
-# Create your views here.
-def index(request):
-    return HttpResponse("Hello, world. You're at the shop index.")
-
+from django.http import JsonResponse
+from .forms import InstrumentFilterForm
+from .models import Instrument
+from django.template.loader import render_to_string
 
 from django.shortcuts import render
-from django.views.generic import ListView
-from .models import Instrument, Category
-from django.db.models import Q
-from django.views.generic import ListView
-from .models import Instrument, Category
-from django.db.models import Q
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from .forms import ContactForm
+from django.shortcuts import get_object_or_404
 
-class ShopListView(ListView):
-    model = Instrument
-    template_name = 'shop/shop.html'
-    context_object_name = 'instruments'
-    paginate_by = 9  
+def index(request):
+    return render(request, 'shop/index.html')
 
-    def get_queryset(self):
-        queryset = Instrument.objects.all()
+def productView(request, product_id):
+    product = get_object_or_404(Instrument, instrument_id=product_id)
+    return render(request, 'shop/product.html', {'product': product})
+
+def ShopView(request):
+    form = InstrumentFilterForm(request.GET)
+    queryset = Instrument.objects.all()
+    
+    if form.is_valid():
+        # Filtrare după model
+        if form.cleaned_data.get('model'):
+            queryset = queryset.filter(model__icontains=form.cleaned_data['model'])
         
-        # Filtrare după categorie
-        category = self.request.GET.get('category')
-        if category:
-            queryset = queryset.filter(category__instrument=category)
+        # Filtrare după preț
+        if form.cleaned_data.get('min_price'):
+            queryset = queryset.filter(price__gte=form.cleaned_data['min_price'])
+        if form.cleaned_data.get('max_price'):
+            queryset = queryset.filter(price__lte=form.cleaned_data['max_price'])
             
-        # Filtrare după tip (electric/acoustic)
-        type_filter = self.request.GET.get('type')
-        if type_filter:
-            queryset = queryset.filter(category__type=type_filter)
+        # Filtrare după categorie
+        if form.cleaned_data.get('category'):
+            queryset = queryset.filter(category__instrument=form.cleaned_data['category'])
+            
+        # Filtrare după tip
+        if form.cleaned_data.get('type'):
+            queryset = queryset.filter(category__type=form.cleaned_data['type'])
+            
+        # Filtrare după rating
+        if form.cleaned_data.get('min_rating'):
+            queryset = queryset.filter(rating__gte=form.cleaned_data['min_rating'])
             
         # Sortare
-        sort = self.request.GET.get('sort')
+        sort = form.cleaned_data.get('sort')
         if sort == 'price_low':
             queryset = queryset.order_by('price')
         elif sort == 'price_high':
             queryset = queryset.order_by('-price')
         elif sort == 'rating':
             queryset = queryset.order_by('-rating')
-            
-        return queryset
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.all()
-        context['current_category'] = self.request.GET.get('category')
-        context['current_type'] = self.request.GET.get('type')
-        return context
+    print(queryset)
+    context = {
+        'form': form,
+        'products': queryset,
+    }
+
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        html = render_to_string(
+            template_name='shop/products_list.html', 
+            context=context,
+            request=request
+        )
+        return JsonResponse({'html': html})
+        
+    return render(request, 'shop/shop.html', context)
+
+
+def contact(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+    return render(request, 'shop/contact.html', {'form': form})
